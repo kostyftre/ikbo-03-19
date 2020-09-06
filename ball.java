@@ -1,47 +1,39 @@
-package ru.mirea.lab1.ru;
+package Java_Praktica.practicheskoe_2;
 
 public class ball {
-    private String color;
-    private String size;
-    private String master;
-
-    public ball(String color, String size, String master) {
-        this.color = color;
-        this.size = size;
-        this.master = master;
+    private double x = 0.0;
+    private double y = 0.0;
+    public ball(){}
+    public ball(double x, double y){
+        this.x = x;
+        this.y = y;
     }
-
-    public String getColor() {
-        return color;
+    public double getX() {
+        return x;
     }
-
-    public void setColor(String color) {
-        this.color = color;
+    public double getY() {
+        return y;
     }
-
-    public String getSize() {
-        return size;
+    public void setX(double x) {
+        this.x = x;
     }
+    public void setY(double y) {
 
-    public void setSize(String size) {
-        this.size = size;
+        this.y = y;
     }
-
-    public String getMaster() {
-        return master;
+    public void setXY(double x, double y){
+        this.x = x;
+        this.y = y;
     }
-
-    public void setMaster(String master) {
-        this.master = master;
+    public void move( double xDisp, double yDisp){
+        x+=xDisp;
+        y+=yDisp;
     }
-
-
 
     @Override
     public String toString() {
-        return String.format("Размер мяча: %s \n Цвет мяча: %s \n Хозяин: %s", this.size, this.color, this.master);
+        return "Ball @ ("+this.x+", "+this.y+").";
     }
-
-
-
 }
+
+
