@@ -7,9 +7,17 @@ public class Tester {
     public static void main(String [] args){
 
         MovableCircle gg= new MovableCircle(1,2,3,4,7);
-        MovablePoint ss = new MovablePoint(1,2,6,7);
+        MovableRectangle hh = new MovableRectangle(6,7,8,9,2,3);
         System.out.println(gg.toString());
-        System.out.println(ss.toString());
+        gg.moveDown();
+        System.out.println(gg.toString());
+        System.out.println("");
+        System.out.println(hh.toString());
+        hh.moveLeft();
+        System.out.println(hh.toString());
+
+
+
 
     }
 }
